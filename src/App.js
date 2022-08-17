@@ -8,12 +8,12 @@ function App() {
   const [student,setStudent]=useState([]);
   const navigate=useNavigate();
   useEffect(()=>{
-    axios.get("https://62ebe621705264f263e31b01.mockapi.io/students")
+    axios.get("https://62fd14966e617f88dea47932.mockapi.io/students")
     .then(e=>setStudent(e.data))
   },[]);
   const Handledelete =(id)=>{
-    axios.delete('https://62ebe621705264f263e31b01.mockapi.io/students/'+id)
-    .then(data=>{axios.get("https://62ebe621705264f263e31b01.mockapi.io/students")
+    axios.delete('https://62fd14966e617f88dea47932.mockapi.io/students/'+id)
+    .then(data=>{axios.get("https://62fd14966e617f88dea47932.mockapi.io/students")
     .then(e=>setStudent(e.data))})
   }
   return (
