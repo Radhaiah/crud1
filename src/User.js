@@ -19,19 +19,19 @@ function User () {
     const handleChange=(e)=>{setFormdata({...formdata,[e.target.name]: e.target.value})}
     useEffect(()=>{
       if(id)
-      axios.get("https://62ebe621705264f263e31b01.mockapi.io/students/"+id)
+      axios.get("https://62fd14966e617f88dea47932.mockapi.io/students/"+id)
     .then(e=>setFormdata(e.data))
     },[id])
     const handleSubmit=()=>{
       if(id){
-      axios.put('https://62ebe621705264f263e31b01.mockapi.io/students/'+id,JSON.stringify(formdata),{headers: {'Content-Type': 'application/json'}}) 
+      axios.put('https://62fd14966e617f88dea47932.mockapi.io/students/'+id,JSON.stringify(formdata),{headers: {'Content-Type': 'application/json'}}) 
         .then((e)=>{setFormdata(initialvalues)})}
         else{
-        axios.post('https://62ebe621705264f263e31b01.mockapi.io/students',JSON.stringify(formdata),{headers: {'Content-Type': 'application/json'}})
+        axios.post('https://62fd14966e617f88dea47932.mockapi.io/students',JSON.stringify(formdata),{headers: {'Content-Type': 'application/json'}})
         .then((e)=>{setFormdata(initialvalues)})}
     }  
     useEffect(()=>{
-      axios.get('https://62ebe621705264f263e31b01.mockapi.io/teacher')
+      axios.get('https://62fd14966e617f88dea47932.mockapi.io/teacher')
       .then((e)=>{setDropdown(e.data)})
     },[]) 
     return (
