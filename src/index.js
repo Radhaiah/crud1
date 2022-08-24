@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import User from './User'
+import User1 from './User1'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,8 +11,8 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path="/" element={<App/>}/>
-    <Route path="/createuser" element={<User/>}/>
-    <Route path="/createuser/:id" element={<User/>}/>
+    <Route path="/createuser" element={<User1/>}/>
+    <Route path="/createuser/:id" element={<User1/>}/>
   </Routes>
   </BrowserRouter>
   </React.StrictMode>
